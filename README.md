@@ -3,10 +3,10 @@
 The script iterates through all the available projects in your GCP account and extracts which compute engine instances can view which storage (e.g. can use the command gsutil ls on a storage).
 
 The script enumerates which compute engine instance configured with at least one of the following permission:
-'https://www.googleapis.com/auth/devstorage.read_only'
-'https://www.googleapis.com/auth/devstorage.read_write'
-'https://www.googleapis.com/auth/devstorage.full_control'
-'https://www.googleapis.com/auth/cloud-platform'
+('https://www.googleapis.com/auth/devstorage.read_only', 
+'https://www.googleapis.com/auth/devstorage.read_write', 
+'https://www.googleapis.com/auth/devstorage.full_control', 
+'https://www.googleapis.com/auth/cloud-platform')
 
 Review the output to easily analyze the viewing permissions on each bucket in order to prevent attackers from exposing data in your GCP environment and stay safe!
 
